@@ -1,11 +1,263 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Basic Battleship Game</title>
-  </head>
-  <body>
-    <div id="left-grid"></div>
-    <div id="right-grid"></div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Basic Battleship Game</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+
+  <table id="left-grid">
+    <tr>
+      <td id="cell1">Cell 1</td>
+      <td id="cell2">Cell 2</td>
+      <td id="cell3">Cell 3</td>
+      <td id="cell4">Cell 4</td>
+      <td id="cell5">Cell 5</td>
+      <td id="cell6">Cell 6</td>
+      <td id="cell7">Cell 7</td>
+      <td id="cell8">Cell 8</td>
+      <td id="cell9">Cell 9</td>
+      <td id="cell10">Cell 10</td>
+
+    </tr>
+    <tr>
+      <td id="cell11">Cell 11</td>
+      <td id="cell12">Cell 12</td>
+      <td id="cell13">Cell 13</td>
+      <td id="cell14">Cell 14</td>
+      <td id="cell15">Cell 15</td>
+      <td id="cell16">Cell 16</td>
+      <td id="cell17">Cell 17</td>
+      <td id="cell18">Cell 18</td>
+      <td id="cell19">Cell 19</td>
+      <td id="cell20">Cell 20</td>
+    </tr>
+    <tr>
+      <td id="cell21">Cell 21</td>
+      <td id="cell22">Cell 22</td>
+      <td id="cell23">Cell 23</td>
+      <td id="cell24">Cell 24</td>
+      <td id="cell25">Cell 25</td>
+      <td id="cell26">Cell 26</td>
+      <td id="cell27">Cell 27</td>
+      <td id="cell28">Cell 28</td>
+      <td id="cell29">Cell 29</td>
+      <td id="cell30">Cell 30</td>
+    </tr>
+    <tr>
+      <td id="cell31">Cell 31</td>
+      <td id="cell32">Cell 32</td>
+      <td id="cell33">Cell 33</td>
+      <td id="cell34">Cell 34</td>
+      <td id="cell35">Cell 35</td>
+      <td id="cell36">Cell 36</td>
+      <td id="cell37">Cell 37</td>
+      <td id="cell38">Cell 38</td>
+      <td id="cell39">Cell 39</td>
+      <td id="cell40">Cell 40</td>
+    </tr>
+    <tr>
+      <td id="cell41">Cell 41</td>
+      <td id="cell42">Cell 42</td>
+      <td id="cell43">Cell 43</td>
+      <td id="cell44">Cell 44</td>
+      <td id="cell45">Cell 45</td>
+      <td id="cell46">Cell 46</td>
+      <td id="cell47">Cell 47</td>
+      <td id="cell48">Cell 48</td>
+      <td id="cell49">Cell 49</td>
+      <td id="cell50">Cell 50</td>
+    </tr>
+    <tr>
+      <td id="cell51">Cell 51</td>
+      <td id="cell52">Cell 52</td>
+      <td id="cell53">Cell 53</td>
+      <td id="cell54">Cell 54</td>
+      <td id="cell55">Cell 55</td>
+      <td id="cell56">Cell 56</td>
+      <td id="cell57">Cell 57</td>
+      <td id="cell58">Cell 58</td>
+      <td id="cell59">Cell 59</td>
+      <td id="cell60">Cell 60</td>
+    </tr>
+    <tr>
+      <td id="cell61">Cell 61</td>
+      <td id="cell62">Cell 62</td>
+      <td id="cell63">Cell 63</td>
+      <td id="cell64">Cell 64</td>
+      <td id="cell65">Cell 65</td>
+      <td id="cell66">Cell 66</td>
+      <td id="cell67">Cell 67</td>
+      <td id="cell68">Cell 68</td>
+      <td id="cell69">Cell 69</td>
+      <td id="cell70">Cell 70</td>
+    </tr>
+    <tr>
+      <td id="cell71">Cell 71</td>
+      <td id="cell72">Cell 72</td>
+      <td id="cell73">Cell 73</td>
+      <td id="cell74">Cell 74</td>
+      <td id="cell75">Cell 75</td>
+      <td id="cell76">Cell 76</td>
+      <td id="cell77">Cell 77</td>
+      <td id="cell78">Cell 78</td>
+      <td id="cell79">Cell 79</td>
+      <td id="cell80">Cell 80</td>
+    </tr>
+    <tr>
+      <td id="cell81">Cell 81</td>
+      <td id="cell82">Cell 82</td>
+      <td id="cell83">Cell 83</td>
+      <td id="cell84">Cell 84</td>
+      <td id="cell85">Cell 85</td>
+      <td id="cell86">Cell 86</td>
+      <td id="cell87">Cell 87</td>
+      <td id="cell88">Cell 88</td>
+      <td id="cell89">Cell 89</td>
+      <td id="cell90">Cell 90</td>
+    </tr>
+    <tr>
+      <td id="cell91">Cell 91</td>
+      <td id="cell92">Cell 92</td>
+      <td id="cell93">Cell 93</td>
+      <td id="cell94">Cell 94</td>
+      <td id="cell95">Cell 95</td>
+      <td id="cell96">Cell 96</td>
+      <td id="cell97">Cell 97</td>
+      <td id="cell98">Cell 98</td>
+      <td id="cell99">Cell 99</td>
+      <td id="cell100">Cell 100</td>
+    </tr>
+  </table>
+
+  <table id="right-grid">
+    <tr>
+      <td id="cell1">Cell 1</td>
+      <td id="cell2">Cell 2</td>
+      <td id="cell3">Cell 3</td>
+      <td id="cell4">Cell 4</td>
+      <td id="cell5">Cell 5</td>
+      <td id="cell6">Cell 6</td>
+      <td id="cell7">Cell 7</td>
+      <td id="cell8">Cell 8</td>
+      <td id="cell9">Cell 9</td>
+      <td id="cell10">Cell 10</td>
+
+    </tr>
+    <tr>
+      <td id="cell11">Cell 11</td>
+      <td id="cell12">Cell 12</td>
+      <td id="cell13">Cell 13</td>
+      <td id="cell14">Cell 14</td>
+      <td id="cell15">Cell 15</td>
+      <td id="cell16">Cell 16</td>
+      <td id="cell17">Cell 17</td>
+      <td id="cell18">Cell 18</td>
+      <td id="cell19">Cell 19</td>
+      <td id="cell20">Cell 20</td>
+    </tr>
+    <tr>
+      <td id="cell21">Cell 21</td>
+      <td id="cell22">Cell 22</td>
+      <td id="cell23">Cell 23</td>
+      <td id="cell24">Cell 24</td>
+      <td id="cell25">Cell 25</td>
+      <td id="cell26">Cell 26</td>
+      <td id="cell27">Cell 27</td>
+      <td id="cell28">Cell 28</td>
+      <td id="cell29">Cell 29</td>
+      <td id="cell30">Cell 30</td>
+    </tr>
+    <tr>
+      <td id="cell31">Cell 31</td>
+      <td id="cell32">Cell 32</td>
+      <td id="cell33">Cell 33</td>
+      <td id="cell34">Cell 34</td>
+      <td id="cell35">Cell 35</td>
+      <td id="cell36">Cell 36</td>
+      <td id="cell37">Cell 37</td>
+      <td id="cell38">Cell 38</td>
+      <td id="cell39">Cell 39</td>
+      <td id="cell40">Cell 40</td>
+    </tr>
+    <tr>
+      <td id="cell41">Cell 41</td>
+      <td id="cell42">Cell 42</td>
+      <td id="cell43">Cell 43</td>
+      <td id="cell44">Cell 44</td>
+      <td id="cell45">Cell 45</td>
+      <td id="cell46">Cell 46</td>
+      <td id="cell47">Cell 47</td>
+      <td id="cell48">Cell 48</td>
+      <td id="cell49">Cell 49</td>
+      <td id="cell50">Cell 50</td>
+    </tr>
+    <tr>
+      <td id="cell51">Cell 51</td>
+      <td id="cell52">Cell 52</td>
+      <td id="cell53">Cell 53</td>
+      <td id="cell54">Cell 54</td>
+      <td id="cell55">Cell 55</td>
+      <td id="cell56">Cell 56</td>
+      <td id="cell57">Cell 57</td>
+      <td id="cell58">Cell 58</td>
+      <td id="cell59">Cell 59</td>
+      <td id="cell60">Cell 60</td>
+    </tr>
+    <tr>
+      <td id="cell61">Cell 61</td>
+      <td id="cell62">Cell 62</td>
+      <td id="cell63">Cell 63</td>
+      <td id="cell64">Cell 64</td>
+      <td id="cell65">Cell 65</td>
+      <td id="cell66">Cell 66</td>
+      <td id="cell67">Cell 67</td>
+      <td id="cell68">Cell 68</td>
+      <td id="cell69">Cell 69</td>
+      <td id="cell70">Cell 70</td>
+    </tr>
+    <tr>
+      <td id="cell71">Cell 71</td>
+      <td id="cell72">Cell 72</td>
+      <td id="cell73">Cell 73</td>
+      <td id="cell74">Cell 74</td>
+      <td id="cell75">Cell 75</td>
+      <td id="cell76">Cell 76</td>
+      <td id="cell77">Cell 77</td>
+      <td id="cell78">Cell 78</td>
+      <td id="cell79">Cell 79</td>
+      <td id="cell80">Cell 80</td>
+    </tr>
+    <tr>
+      <td id="cell81">Cell 81</td>
+      <td id="cell82">Cell 82</td>
+      <td id="cell83">Cell 83</td>
+      <td id="cell84">Cell 84</td>
+      <td id="cell85">Cell 85</td>
+      <td id="cell86">Cell 86</td>
+      <td id="cell87">Cell 87</td>
+      <td id="cell88">Cell 88</td>
+      <td id="cell89">Cell 89</td>
+      <td id="cell90">Cell 90</td>
+    </tr>
+    <tr>
+      <td id="cell91">Cell 91</td>
+      <td id="cell92">Cell 92</td>
+      <td id="cell93">Cell 93</td>
+      <td id="cell94">Cell 94</td>
+      <td id="cell95">Cell 95</td>
+      <td id="cell96">Cell 96</td>
+      <td id="cell97">Cell 97</td>
+      <td id="cell98">Cell 98</td>
+      <td id="cell99">Cell 99</td>
+      <td id="cell100">Cell 100</td>
+    </tr>
+  </table>
+
+<button type="button" name="button">New Game</button>
+
+</body>
 </html>
