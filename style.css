@@ -1,3 +1,13 @@
 body {
   background-color: #FFFFF5;
 }
+
+#left-grid {
+  width: 40%;
+  float: left;
+}
+
+#right-grid {
+  width: 40%;
+  float: right;
+}
