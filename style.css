@@ -1,14 +1,22 @@
 body {
   width: 100%;
   background-color: #FFFFF5;
+  margin: 0 auto;
+  padding: 0;
+}
+
+td{
+  border: 1px solid black;
 }
 
 #left-grid {
-  width: 40%;
+  width: 35%;
   float: left;
+  height: 100px;
 }
 
 #right-grid {
-  width: 40%;
+  width: 35%;
   float: right;
+  height: 100px;
 }
