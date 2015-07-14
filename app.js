@@ -1,8 +1,9 @@
 // Setup the two boards
 // Choose the positions where you want your battle ships to go.
 // Make the computer choose the positions of their battleships (AI)
-// You choose to hit one of their squares
+// Prompt user for a guess
 // Save the choice of square in an array
+// Check the user's guess against the battleship to look for a hit, miss or sink
 // Make the computer make a random choice of squares (primative AI)
 // Then work out when the game is finished
 
