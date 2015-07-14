@@ -33,45 +33,53 @@ function includes(array, location) {
 
 function topLeftSurroundingPositions() {
   surroundingPositions = [2, 11];
+  return surroundingPositions;
 }
 
 function topRightSurroundingPositions() {
   surroundingPositions = [9, 20];
+  return surroundingPositions;
 }
 
 function bottomLeftSurroundingPositions() {
   surroundingPositions = [81, 92];
+  return surroundingPositions;
 }
 
 function bottomRightSurroundingPositions() {
   surroundingPositions = [90, 99];
+  return surroundingPositions;
 }
 
 function topRowSurroundingPositions(location) {
   surroundingPositions = [location - 1, location + 1, location + 10];
+  return surroundingPositions;
 }
 
 function bottomRowSurroundingPositions(location) {
   surroundingPositions = [location - 1, location + 1, location - 10];
+  return surroundingPositions;
 }
 
 function leftEdgeSurroundPositions(location) {
   surroundingPositions = [location - 10, location + 10, location + 1];
+  return surroundingPositions;
 }
 
 function rightEdgeSurroundingPositions(location) {
   surroundingPositions = [location - 10, location + 10, location - 1];
+  return surroundingPositions;
 }
 
 function getSurroundingPositions(location) {
-  if (includes(leftEdge,location)) {topLeftSurroundingPositions()};
-  if (includes(topRight,location)) {topRightSurroundingPositions()};
-  if (includes(bottomLeft,location)) {bottomLeftSurroundingPositions()};
-  if (includes(bottomRight,location)) {bottomRightSurroundingPositions()};
-  if (includes(topRow,location)) {topRowSurroundingPositions(location)};
-  if (includes(bottomRow,location)) {bottomRowSurroundingPositions(location)};
-  if (includes(leftEdge,location)) {leftEdgeSurroundPositions(location)};
-  if (includes(rightEdge,location)) {rightEdgeSurroundingPositions(location)};
+  if (includes(leftEdge,location)) {return topLeftSurroundingPositions()};
+  if (includes(topRight,location)) {return topRightSurroundingPositions()};
+  if (includes(bottomLeft,location)) {return bottomLeftSurroundingPositions()};
+  if (includes(bottomRight,location)) {return bottomRightSurroundingPositions()};
+  if (includes(topRow,location)) {return topRowSurroundingPositions(location)};
+  if (includes(bottomRow,location)) {return bottomRowSurroundingPositions(location)};
+  if (includes(leftEdge,location)) {return leftEdgeSurroundPositions(location)};
+  if (includes(rightEdge,location)) {return rightEdgeSurroundingPositions(location)};
 }
 
 buildTables = function(side){
