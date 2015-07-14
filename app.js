@@ -38,6 +38,10 @@ function getSurroundingPosition() {
   // will add content later
 }
 
+function getRandomPosition() {
+  // will add content later
+}
+
 $(function(){
   start();
 })
