@@ -29,6 +29,11 @@ function ships(name) {
   this.name = name;
 }
 
+function Game() {
+  this.users = users;
+  this.shipsUsed = shipsUsed;
+}
+
 $(function(){
   start();
 })
