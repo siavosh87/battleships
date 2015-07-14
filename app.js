@@ -9,7 +9,7 @@
 * Then work out when the game is finished
 */
 
-var level = 10,
+var level = 10;
 var locationsHit = [];
 const topRow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const bottomRow = [91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
@@ -19,6 +19,17 @@ const topLeft = [1];
 const topRight = [10];
 const bottomLeft = [91];
 const bottomRight = [100];
+
+function includes(array, location) {
+  var found = false;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] == location) {
+      found = true;
+      break;
+    }
+  }
+  return found;
+}
 
 function topLeftSurroundingPositions() {
   surroundingPositions = [2, 11];
@@ -52,15 +63,15 @@ function rightEdgeSurroundingPositions(location) {
   surroundingPositions = [location - 10, location + 10, location - 1];
 }
 
-function getSurroundingPosition(location) {
-  if (topLeft.includes(location)) {topLeftSurroundingPositions()};
-  if (topRight.includes(location)) {topRightSurroundingPositions()};
-  if (bottomLeft.includes(location)) {bottomLeftSurroundingPositions()};
-  if (bottomRight.includes(location)) {bottomRightSurroundingPositions()};
-  if (topRow.includes(location)) {topRowSurroundingPositions(location)};
-  if (bottomRow.includes(location)) {bottomRowSurroundingPositions(location)};
-  if (leftEdge.includes(location)) {leftEdgeSurroundPositions(location)};
-  if (rightEdge.includes(location)) {rightEdgeSurroundingPositions(location)};
+function getSurroundingPositions(location) {
+  if (includes(leftEdge,location)) {topLeftSurroundingPositions()};
+  if (includes(topRight,location)) {topRightSurroundingPositions()};
+  if (includes(bottomLeft,location)) {bottomLeftSurroundingPositions()};
+  if (includes(bottomRight,location)) {bottomRightSurroundingPositions()};
+  if (includes(topRow,location)) {topRowSurroundingPositions(location)};
+  if (includes(bottomRow,location)) {bottomRowSurroundingPositions(location)};
+  if (includes(leftEdge,location)) {leftEdgeSurroundPositions(location)};
+  if (includes(rightEdge,location)) {rightEdgeSurroundingPositions(location)};
 }
 
 buildTables = function(side){
