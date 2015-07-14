@@ -22,6 +22,13 @@ start = function() {
   buildTables("right");
 };
 
+function ships(name) {
+  if (!(this instanceof ships)) {
+    return new Ships(name);
+  }
+  this.name = name;
+}
+
 $(function(){
   start();
 })
