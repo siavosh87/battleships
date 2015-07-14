@@ -31,6 +31,10 @@ function Board() {
   this.bottomRight = [100];
 }
 
+function generateBoards() {
+  var playerBoard = new Board();
+  var computerBoard = new Board();
+}
 
 
 function includes(array, location) {
