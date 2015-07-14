@@ -7,6 +7,7 @@
 // Then work out when the game is finished
 
 var level = 10,
+var locationsHit = [];
 
 buildTables = function(side){
   $('body').append("<ul class='"+side+"''></ul>")
@@ -32,6 +33,9 @@ function ships(name) {
 function Game() {
   this.users = users;
   this.shipsUsed = shipsUsed;
+}
+function getSurroundingPosition() {
+  // will add content later
 }
 
 $(function(){
