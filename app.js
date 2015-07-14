@@ -20,34 +20,38 @@ var locationsHit = [];
 // const bottomLeft = [91];
 // const bottomRight = [100];
 
-function generateArray(arrayName, number) {
-  var arrayName = [];
-  for (var i = 1; i <= number; i++) {
-    arrayName.push(i);
-  }
-}
+var topRow,
+    bottomRow,
+    leftEdge,
+    rightEdge,
+    topLeft,
+    topRight,
+    bottomLeft,
+    bottomRight,
+    playerBoard,
+    computerBoard;
 
 function Board() {
-  this.generateBoard() {
+  generateBoard = function() {
     var cells = [];
     for (var i = 0; i <= 100 ; i++) {
       cells.push(i);
+    }
   }
-  this.topRow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  this.bottomRow = [91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
-  this.leftEdge = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
-  this.rightEdge = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-  this.topLeft = [1];
-  this.topRight = [10];
-  this.bottomLeft = [91];
-  this.bottomRight = [100];
+  topRow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  bottomRow = [91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
+  leftEdge = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
+  rightEdge = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  topLeft = [1];
+  topRight = [10];
+  bottomLeft = [91];
+  bottomRight = [100];
 }
 
 function generateBoards() {
-  var playerBoard = new Board();
-  var computerBoard = new Board();
+  playerBoard = new Board();
+  computerBoard = new Board();
 }
-
 
 function includes(array, location) {
   var found = false;
@@ -63,7 +67,7 @@ function includes(array, location) {
 function isOuterEdge(location) {
   var result = false;
   if (includes(topRow,location) || includes(bottomRow,location)
-      || includes(leftEdge,location) || includes(rightEdge,location)) {
+  || includes(leftEdge,location) || includes(rightEdge,location)) {
     result = true;
   }
   return result;
@@ -129,8 +133,6 @@ function getSurroundingPositions(location) {
   }
 }
 
-
-
 buildTables = function(side){
   $('body').append("<ul class='"+side+"''></ul>")
   var $grid = $('.'+side);
@@ -144,20 +146,6 @@ start = function() {
   buildTables("left");
   buildTables("right");
 };
-
-function Ships(name) {
-  if (!(this instanceof ships)) {
-    return new Ships(name);
-  }
-  this.name = name;
-}
-
-function Game() {
-  this.users = users;
-  this.shipsUsed = shipsUsed;
-}
-
-
 
 function getRandomPosition() {
   // will add content later
