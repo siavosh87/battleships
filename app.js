@@ -11,14 +11,25 @@
 
 var level = 10;
 var locationsHit = [];
-const topRow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const bottomRow = [91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
-const leftEdge = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
-const rightEdge = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-const topLeft = [1];
-const topRight = [10];
-const bottomLeft = [91];
-const bottomRight = [100];
+// const topRow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const bottomRow = [91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
+// const leftEdge = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
+// const rightEdge = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+// const topLeft = [1];
+// const topRight = [10];
+// const bottomLeft = [91];
+// const bottomRight = [100];
+
+function Board() {
+  this.topRow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  this.bottomRow = [91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
+  this.leftEdge = [1, 11, 21, 31, 41, 51, 61, 71, 81, 91];
+  this.rightEdge = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  this.topLeft = [1];
+  this.topRight = [10];
+  this.bottomLeft = [91];
+  this.bottomRight = [100];
+}
 
 
 
@@ -102,6 +113,8 @@ function getSurroundingPositions(location) {
   }
 }
 
+
+
 buildTables = function(side){
   $('body').append("<ul class='"+side+"''></ul>")
   var $grid = $('.'+side);
@@ -116,7 +129,7 @@ start = function() {
   buildTables("right");
 };
 
-function ships(name) {
+function Ships(name) {
   if (!(this instanceof ships)) {
     return new Ships(name);
   }
