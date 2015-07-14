@@ -20,6 +20,8 @@ const topRight = [10];
 const bottomLeft = [91];
 const bottomRight = [100];
 
+
+
 function includes(array, location) {
   var found = false;
   for (var i = 0; i < array.length; i++) {
@@ -29,6 +31,15 @@ function includes(array, location) {
     }
   }
   return found;
+}
+
+function isOuterEdge(location) {
+  var result = false;
+  if (includes(topRow,location) || includes(bottomRow,location)
+      || includes(leftEdge,location) || includes(rightEdge,location)) {
+    result = true;
+  }
+  return result;
 }
 
 function topLeftSurroundingPositions() {
@@ -71,7 +82,7 @@ function rightEdgeSurroundingPositions(location) {
   return surroundingPositions;
 }
 
-function getSurroundingPositions(location) {
+function getSurroundingEdgePositions(location) {
   if (includes(leftEdge,location)) {return topLeftSurroundingPositions()};
   if (includes(topRight,location)) {return topRightSurroundingPositions()};
   if (includes(bottomLeft,location)) {return bottomLeftSurroundingPositions()};
@@ -80,6 +91,15 @@ function getSurroundingPositions(location) {
   if (includes(bottomRow,location)) {return bottomRowSurroundingPositions(location)};
   if (includes(leftEdge,location)) {return leftEdgeSurroundPositions(location)};
   if (includes(rightEdge,location)) {return rightEdgeSurroundingPositions(location)};
+}
+
+function getSurroundingPositions(location) {
+  if (isOuterEdge(location)) {
+    return getSurroundingEdgePositions(location);
+  } else {
+    surroundingPositions = [location - 1, location + 1, location - 10, location + 10];
+    return surroundingPositions;
+  }
 }
 
 buildTables = function(side){
